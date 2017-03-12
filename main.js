@@ -16,7 +16,7 @@ for (var i = 0; i < numberButtons.length; i++) {
   numberButtons[i].addEventListener('click', function(e) {
     // For all buttons wait for a click then grab the value from the
     // inner HTML of the document.
-    var newNumberVal = e.target.innerHTML;
+    var newNumberVal = e.target.innerHTML; //Returns the innerHTML property
     // stores the value of the button clicked into newNUmberVal
     var oldNumberVal = document.getElementById('answer').innerHTML;
     // stores the value of the number input into the answer area of the html doc
@@ -43,7 +43,8 @@ clearButton.addEventListener('click', function() {
 });
 
 
-// 
+// Takes the firstNumber, coerces it into a number and performs
+// the operators function with second number provided
 equalsButton.addEventListener('click', function() {
   var answer;
   if (operator === '+') {
@@ -59,8 +60,8 @@ equalsButton.addEventListener('click', function() {
   else  {
   answer = Number(firstNumber) / Number(answerArea.innerHTML);
 }
-if (answer > 9999999) {
-  answerArea.innerHTML = 'too big';
+if (answer > 9999999999) {
+  answerArea.innerHTML = 'Try a smaller number';
 } else {
   answerArea.innerHTML = String(answer).slice(0,7);
 }
