@@ -7,6 +7,28 @@
   text-decoration: underline;
 }
 
+// Creates the outline of the calculator
+.calculator {
+  background: lightgrey;
+  width: calc(60vh);
+  margin: 0 auto;
+  position: relative;
+  border-radius: 10px;
+  box-sizing: content-box;
+  padding-bottom: 1vh;
+  padding-right: 1vh;
+  border: 2px solid black;
+}
+
+.calculator::after, // Creates cosmetics. Clears and adds space.
+// helps create the layout of the calculator
+.buttons::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+// All buttons have same dimensions
 button {
   font-family: "Georgia", monospace; // letters and characters each occupy the
   //same amount of horizontal space. This contrasts with variable-width fonts,
@@ -39,8 +61,7 @@ button:focus {  //used for styling an element that is currently targeted by
   //button when pressed.
 }
 
-
-
+// Output screen
 #answer {
   font-family: "Georgia", monospace;
   color: #272F1B;
@@ -61,7 +82,8 @@ button:focus {  //used for styling an element that is currently targeted by
   float: left;
 }
 
-#answer::after {
+#answer::after { //matches a virtual last child of the selected element.
+  // It is typically used to add cosmetic content to an element
   position: absolute;
   top: 0;
   left: 0;
@@ -70,43 +92,28 @@ button:focus {  //used for styling an element that is currently targeted by
   content: '';
 }
 
-.calculator {
-  background: lightgrey;
-  width: calc(60vh);
-  margin: 0 auto;
-  position: relative;
-  border-radius: 10px;
-  box-sizing: content-box;
-  padding-bottom: 1vh;
-  padding-right: 1vh;
-  border: 2px solid black;
-}
-.calculator::after,
-.buttons::after {
-  clear: both;
-  content: '';
-  display: block;
-}
-
+// Clear button to clear the display and reverts to 0
 button.clear {
   margin-top: 2vh;
   margin-right: -.1vh;
   float:right;
-
 }
 
+// Styling of the numbers buttons
 .numbers {
   width: 45.5vh;
   float: left;
   padding-left: 1vh;
 }
 
+// Styling of the operators inside of the button
 .operators {
   width: 12.5vh;
   float: left;
   padding-right: 1vh;
 }
 
+// Styling of the actual operator buttons
 .operators button {
   color: #272F1B;
   background: #bf700f;
@@ -121,13 +128,7 @@ button.clear {
     .5vh .5vh .2vh rgba(0,0,0,0.1)
 }
 
-.operators button:active {
-  box-shadow:
-    inset .1vh .1vh .2vh rgba(255,255,255,0.3),
-    inset -.1vh -.1vh .2vh rgba(0,0,0,0.1),
-    .2vh .2vh .2vh rgba(0,0,0,0.2);
-}
-
+// Creates the blue equals button
 button.equals {
   position: absolute;
   bottom: 2.1vh;

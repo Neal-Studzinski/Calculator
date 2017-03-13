@@ -24,7 +24,7 @@ for (var i = 0; i < numberButtons.length; i++) {
       document.getElementById('answer').innerHTML = oldNumberVal + newNumberVal;
       // Allows for more than one digit input buy placing them together
     } else {
-      alert('Sorry, up to 11 digits please. This is a simple project');
+      alert('Sorry, up to 11 digits please.');
     }
        
   });
@@ -60,6 +60,7 @@ equalsButton.addEventListener('click', function() {
   else  {
   answer = Number(firstNumber) / Number(answerArea.innerHTML);
 }
+// Only allows 11 digits to fit the output screen
 if (answer > 9999999999) {
   answerArea.innerHTML = 'Try a smaller number';
 } else {
