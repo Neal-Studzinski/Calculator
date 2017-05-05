@@ -129,10 +129,12 @@ button.clear {
 }
 
 // Creates the blue equals button
-button.equals {
-  position: absolute;
-  bottom: 2.1vh;
-  right: 16.3vh;
-  background: #1665AF;
-  border: 2px solid black;
+.equals button {
+    display:none;
+    position: absolute;
+    bottom: 2.1vh;
+    right: 16.3vh;
+    margin-bottom: 2vh;
+    background: #1665AF;
+    border: 2px solid black;
 }

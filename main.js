@@ -7,7 +7,7 @@ var answerArea = document.getElementById('answer');
 // Returns the first Element within the html document that matches the
 // specified group of selectors
 var clearButton = document.querySelector('.clear');
-var equalsButton = document.querySelector('.equals');
+var equalsButton = document.querySelector('#equalsButton');
 
 var firstNumber;
 var operator;
