@@ -2,6 +2,7 @@ Directions
 http://venomous-pie.surge.sh/
 Create a NEW html and javascript calculator. This one should have
 buttons for numbers 0-9 and buttons for each of the 4 basic math operators (+, -, /, *)
+
 -a button with the equals sign
 -an output area for displaying the result
 -For explorer mode, you only need to perform math on two single digit integers. You are only expected to display the final result. Make sure that the correct math is being done!
